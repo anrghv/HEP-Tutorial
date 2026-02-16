@@ -45,7 +45,7 @@ def apply_json_mask(arrays, json_input, run_periods=None):
     valid_lumis = load_golden_json(json_input, run_periods)    
     runs = ak.to_numpy(arrays.run)
     lumis = ak.to_numpy(arrays.luminosityBlock)
-    mask = np. zeros(len(runs), dtype=bool)
+    mask = np.zeros(len(runs), dtype=bool)
     
     for run, lumi_ranges in valid_lumis.items():
         run_mask = (runs == run)
